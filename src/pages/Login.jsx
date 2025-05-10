@@ -1,6 +1,6 @@
 import {useState} from 'react';
 import './Login.css';
-
+import warehouseImage from '../assets/warehouses.jpg'; 
 function Login() {
     // State variables for email and password
     // These will be used to store the user's input
@@ -19,12 +19,20 @@ function Login() {
     //TODO: Add authentication logic here
     }
   return (
+    <div className="login-page">
+    <div className="login-image">
+      <img src={warehouseImage} alt="Warehouse" />
+    </div>
     <div className ="login-container-admin">
-      <form className="login-form-admin" onSubmit={handleLogin}>
-        <h2>K.Y. Ting Merchandise</h2>
+    <div className="login-content">
+    <h1>K.Y. Ting Merchandise</h1>
+        <form className="login-form-admin" onSubmit={handleLogin}>
+        
+        <h2>Welcome!</h2>
         <p>Let's run things smoothly.</p>
         <input
-        type="email" //
+        type="email" 
+        name="email"
         placeholder="Email"
         value={email} //email state variable is used to set the value of the email input field
         onChange={(e) =>setEmail(e.target.value)} // Update email state variable when user types in the email input from field
@@ -32,17 +40,20 @@ function Login() {
         />
          <input
         type="password"
+        name="password"
         placeholder="Password"
         value={password} //password state variable is used to set the value of the password input field
-        onChange={(e) =>setEmail(e.target.value)} // Update email state variable when user types in the email input from field
+        onChange={(e) =>setPassword(e.target.value)} // Update email state variable when user types in the email input from field
         required
         />
-        <button type="submit">Logiin</button>
+        <button type="submit">Login</button>
         <p className="link-text">
             No account? <a href="/register">Register</a>
         </p>
 
       </form>
+    </div>
+    </div>
     </div>
   );
 }

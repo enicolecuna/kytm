@@ -1,0 +1,237 @@
+
+
+.dashboard-page {
+    display: flex;
+    height: 100vh;
+    background-color: #111; /* Matches sidebar */
+    
+  }
+  
+  .dashboard-content {
+    margin-left: 300px; /* same as sidebar width */
+    margin-top:2.5vh;
+   width:80%;
+    background-color: #f3f3f3;
+    border-radius: 30px;
+    padding: 2rem;
+    height:95vh;
+    box-sizing: border-box;
+    overflow-y: auto;
+    position: relative;
+    z-index: 2;
+    
+  }
+  
+  
+  .dashboard-card {
+    background-color: white;
+    padding: 1.5rem 2rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+  }
+  
+  .search-bar {
+    width: 97%;
+    padding: 0.6rem 1rem;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    margin-bottom: 0;
+  }
+  
+  .sort-controls {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    font-size: 20px;
+    margin-bottom: 2rem;
+  }
+  .category-dropdown {
+    width:200px;
+    font-size: 20px;
+    padding:4px;
+
+  }
+  .sort-controls button {
+    background: none;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 0.4rem 0.8rem;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  .sort-controls button:hover {
+    background-color: #eee;
+  }
+  
+  .add-btn {
+    margin-left: auto;
+    border: none;
+    background: none;
+    color: #000;
+    font-size: 0.95rem;
+    cursor: pointer;
+  }
+  
+  .item-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  .item-edit {
+    position: absolute;
+    top: 0.7rem;
+    right: 0.7rem;
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+    cursor: pointer;
+  }
+  
+  .item-card {
+    background-color: white;
+    width: 160px;
+    height: 180px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.15);
+    position: relative;
+    padding: 1rem;
+  }
+  
+    
+  @media(max-width:900px){
+    .dashboard-content{
+        margin-left: 200px; 
+        width:70%;
+    }
+  }
+@media(max-width: 650px) {
+    .dashboard-content {
+        margin-left: 0;
+        width: 100%;
+        height: 100vh;
+        padding: 1rem;
+        margin-left
+    }
+    .dashboard-card {
+        padding: 1rem;
+    }
+    .item-card {
+        width: 100px;
+        height: 120px;
+    }
+  }
+  @media(max-width:1024px){
+    .dashboard-content{
+        margin-left: 250px; 
+        width:74%;
+    }
+    .search-bar{
+        width: 95%;
+    }
+    .sort-controls {
+       
+        font-size: 16px;
+        
+      }
+      .category-dropdown {
+       
+        font-size: 16px;
+       
+      }
+      .sort-controls button {
+       
+        font-size: 16px;
+        
+      }
+  }
+  @media (max-width: 768px) {
+    .dashboard-content {
+      margin-left: 220px; 
+      width: 68.5%;
+      font-size: 16px;
+    }
+  
+    .search-bar {
+      width: 92%;
+    }
+  
+    .sort-controls {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.5rem;
+      font-size: 16px;
+    }
+  
+    .category-dropdown,
+    .sort-controls button {
+      font-size: 16px;
+      flex: 1 1 40%; /* makes each item shrink/wrap better */
+      min-width: 140px;
+      text-align: center;
+    }
+  
+    .add-btn {
+      flex: 1 1 100%; /* makes it go full width if needed */
+      text-align: center;
+    }
+    
+  }
+  
+
+  @media(min-width:1440px){
+    .dashboard-content{
+        margin-left: 300px; 
+        margin-right:25px;
+    }
+  }
+  @media(max-width:425px){
+    .dashboard-content{
+        margin-left: 20px; 
+        margin-right:20px;
+        height: 95vh;
+        width:100%;
+        font-size: 14px;
+    }
+    .sort-controls {
+       
+        font-size: 14px;
+        
+      }
+      .category-dropdown {
+       
+        font-size: 14px;
+       
+      }
+      .sort-controls button {
+       
+        font-size: 14px;
+        
+      }
+      
+  .search-bar {
+    width: 90%;
+   margin-bottom:0;
+  
+  }
+}
+  @media(max-width:375px){
+    .search-bar {
+        width: 88%;
+       
+      
+      }
+      .item-card {
+        width:90px;
+      }
+  }
+  @media(max-width:375px){
+    .item-card {
+        width:70px;
+      }
+  }

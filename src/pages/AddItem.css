@@ -1,0 +1,182 @@
+/* Page Layout Matching Dashboard */
+.add-item-page {
+    margin-left: 300px; /* same as sidebar width */
+    margin-top: 2.5vh;
+    width: 78%;
+    background-color: #f3f3f3;
+    border-radius: 30px;
+    padding: 2rem;
+    height: 95vh;
+    box-sizing: border-box;
+    overflow-y: auto;
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* Consistent Search Bar */
+  .search-bar {
+    width: 97%;
+    padding: 0.6rem 1rem;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Heading */
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Upload Image Box */
+  .upload-box {
+    background-color: white;
+    border-radius: 16px;
+    border: 2px dashed #ccc;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    height: 150px;
+    overflow: hidden;
+    position: relative;
+    
+
+
+  }
+  
+  .upload-box img {
+    width: 40px;
+    margin: 0 auto 0; /* center in form */
+    height: 40px;
+    object-fit: contain;
+  }
+  
+  .image-preview {
+    max-height: 100%;
+    max-width: 100%;
+   
+    object-fit: contain;
+  }
+  
+  /* Form Styles */
+  .item-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .item-form label {
+    display: flex;
+    flex-direction:column;
+    align-items: flex-start;
+    font-size: 1rem;
+    
+  }
+  
+  .item-form input {
+    flex: 0 0 60%;
+    padding: 0.4rem;
+    border: none;
+    width:80%;
+    border-bottom: 2px solid black;
+    background: transparent;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    outline: none;
+    
+  }
+  .form-fields {
+    width: 60%;
+    
+    margin: 0px auto; /* center horizontally */
+    
+  }
+  
+  
+  /* Submit Button */
+  .submit-btn {
+    margin-top: 2rem;
+    padding: 0.6rem 1.5rem;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    align-self: flex-end;
+  }
+  .preview-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .preview-card {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  
+  .preview-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  
+  @media(max-width: 1024px) {
+    .add-item-page {
+      margin-left: 250px;
+      width: 74%;
+    }
+  
+    .search-bar {
+      width: 95%;
+    }
+  }
+  
+  @media(max-width: 768px) {
+    .add-item-page {
+      margin-left: 220px;
+      width: 68.5%;
+      font-size: 16px;
+    }
+  
+    .search-bar {
+      width: 92%;
+    }
+  }
+  
+  @media(max-width: 425px) {
+    .add-item-page {
+      margin-left: 20px;
+      margin-right: 20px;
+      height: 95vh;
+      width: 100%;
+      font-size: 14px;
+    }
+  
+    .search-bar {
+      width: 90%;
+      margin-bottom: 0;
+    }
+  }
+  
+  @media(max-width: 375px) {
+    .search-bar {
+      width: 88%;
+    }
+  }
+  

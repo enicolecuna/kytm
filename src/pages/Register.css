@@ -1,4 +1,4 @@
-.login-page {
+.auth-page {
     display: flex;
     height: 100vh;
     width: 100%;
@@ -7,22 +7,22 @@
   }
   
   /* Left side: full-height image */
-  .login-image {
+  .auth-image {
     width: 55%;
     height: 100%;
   }
   
-  .login-image img {
+  .auth-image img {
     width: 100%;
     height: 100%;
-    min-width:250px;
+    min-width: 250px;
     object-fit: cover;
-    margin-right:50px;
-    margin-left:50px;
+    margin-right: 50px;
+    margin-left: 50px;
   }
   
-  /* Right side: full-height login form */
-  .login-container-admin {
+  /* Right side: full-height form */
+  .auth-container {
     width: 45%;
     height: 100%;
     display: flex;
@@ -30,43 +30,40 @@
     align-items: center;
     background-color: #ffffff;
   }
-  .login-content {
+  
+  .auth-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
   
-  
-  .login-form-admin {
+  .auth-form {
     width: 100%;
     max-width: 360px;
     padding: 2rem;
-
   }
-   
-  .login-form-admin h1 {
+  
+  .auth-form h1 {
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 0.5rem;
-    
   }
   
-  .login-form-admin h2 {
+  .auth-form h2 {
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 0.5rem;
-    
   }
   
-  .login-form-admin p {
+  .auth-form p {
     font-size: 1rem;
     color: black;
     margin-bottom: 3rem;
   }
- 
   
-  .login-form-admin input {
+  .auth-form input,
+  .auth-select {
     width: 100%;
     border: none;
     border-bottom: 1px solid black;
@@ -75,85 +72,80 @@
     font-size: 0.95rem;
     background-color: transparent;
     outline: none;
-    
-  }
-  .login-form-admin input::placeholder {
-    color: black;
-    opacity: 1; /* Fully opaque */
   }
   
-  .login-form-admin button {
+  .auth-form input::placeholder {
+    color: black;
+    opacity: 1;
+  }
+  
+  .auth-select {
+    background-color: transparent;
+    color: black;
+    font-size: 0.95rem;
+  }
+  
+  .auth-form button {
     width: 100%;
     background-color: black;
     color: white;
     border: none;
     padding: 0.7rem;
     border-radius: 5px;
-    font-weight: semibold;
+    font-weight: 600;
     cursor: pointer;
     font-size: 1rem;
   }
   
-  .login-form-admin button:hover {
+  .auth-form button:hover {
     background-color: #555;
   }
   
-  .link-text {
-    font-size: 0.8rem;
-    text-align: right;
-    margin-top: 0.8rem;
-  }
-  
-  .link-text a {
-    color: gray;
-    text-decoration: none;
-  }
-  
-  .link-text a:hover {
-    text-decoration: underline;
-  }
-  @media(max-width:1000px){
-    .login-image{
-        width:50%;
-        padding-right:50px;
+  /* Medium screen adjustments */
+  @media (max-width: 1000px) {
+    .auth-image {
+      width: 50%;
+      padding-right: 50px;
     }
   }
-  @media(max-width:800px){
-    .login-page {
-        gap: 2rem; 
-      }
-    
-    .login-image{
-        width:45%;
-        padding-right:50px;
+  
+  @media (max-width: 800px) {
+    .auth-page {
+      gap: 2rem;
     }
-    .login-container-admin {
-        padding-right:50px;
-      }
-   
+  
+    .auth-image {
+      width: 45%;
+      padding-right: 50px;
+    }
+  
+    .auth-container {
+      padding-right: 50px;
+    }
   }
-  /* 📱 Mobile view: stack form, hide image */
+  
+  /* 📱 Mobile view */
   @media (max-width: 600px) {
-    .login-page {
+    .auth-page {
       flex-direction: column;
     }
   
-    .login-image {
+    .auth-image {
       display: none;
     }
   
-    .login-container-admin {
+    .auth-container {
       width: 100%;
       height: 100vh;
       padding: 2rem;
     }
   
-    .login-form-admin {
+    .auth-form {
       max-width: 100%;
     }
   
-    .login-form-admin h2,
-    .login-form-admin p {
+    .auth-form h2,
+    .auth-form p {
       text-align: center;
     }
   }
