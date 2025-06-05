@@ -4,6 +4,8 @@ import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
 import AddItem from './pages/AddItem';
 import EditItem from './pages/EditItem';
+import { Navigate } from 'react-router-dom';
+
 
 function App() {
   
