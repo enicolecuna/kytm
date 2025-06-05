@@ -1,5 +1,6 @@
 import {useState} from 'react';
 import './Register.css';
+import axios from 'axios';
 import warehouseImage from '../assets/warehouses.jpg';
 
 function Register(){
@@ -16,10 +17,27 @@ function Register(){
         setForm({ ...form, [e.target.name]: e.target.value });
       };
     
-    const handleSubmit=(e) =>{
+    const handleSubmit= async (e) =>{
         e.preventDefault();
-        console.log('Registering with', form);
-        //TODO: Add registration logic here
+        try{
+            const res = await fetch('http://localhost:5000/api/auth/register', {
+                method: 'POST',
+                headers:{
+                    'Content-Type': 'application/json',
+                },body: JSON.stringify(form),
+            });
+            const data = await res.json();
+             
+            if(!res.ok){
+                throw new Error(data.message);
+            }
+            console.log(data);
+            window.location.href = '/login';
+
+        }catch(err){
+            alert(err.message);
+            console.error(err);
+        }
     }
     return(
         <div className="auth-page">
@@ -88,9 +106,9 @@ function Register(){
                         className="auth-select"
                         required>
                       <option value="">Role</option>
-                      <option value="admin">User</option>
+                      <option value="user">User</option>
                       <option value="admin">Admin</option>
-                      <option value="user">Employee</option>
+                      
                     </select>
                     <button type="submit">Register</button>
                     </form>

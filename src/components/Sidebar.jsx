@@ -14,10 +14,10 @@ import { NavLink } from 'react-router-dom';
 
             </div>
             <nav className="sidebar-nav">
-        <NavLink to="/dashboard" className="nav-item" activeClassName="active">Dashboard</NavLink>
-        <NavLink to="/task" className="nav-item" activeClassName="active">Task</NavLink>
-        <NavLink to="/sales" className="nav-item" activeClassName="active">Sales</NavLink>
-        <NavLink to="/orders" className="nav-item" activeClassName="active">Orders</NavLink>
+        <NavLink to="/Dashboard" className="nav-item" activeclassname="active">Dashboard</NavLink>
+        <NavLink to="/add" className="nav-item" activeclassname="active">Add Item</NavLink>
+        <NavLink to="/sales" className="nav-item" activeclassname="active">Sales</NavLink>
+        <NavLink to="/orders" className="nav-item" activeclassname="active">Orders</NavLink>
       </nav>
             <div className="sidebar-bottom">
         <img src={userIconImage} alt="User Icon" className="user-icon" />

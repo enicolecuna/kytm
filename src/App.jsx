@@ -11,15 +11,14 @@ function App() {
   return (
     
    <Routes>
-    <Route path="/" element={<Login />} />
+    <Route path="/login" element={<Login />} />
     <Route path="/register" element={<Register />} />
     <Route path="/dashboard" element={<Dashboard />} />
     <Route path="/add" element={<AddItem />} />
     <Route path="/edit/:id" element={<EditItem />} />
-    
    </Routes>
    
   )
 }
 
-export default App
+export default App;

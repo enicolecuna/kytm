@@ -12,7 +12,7 @@ const authMiddleware = async (req,res,next)=>{
     
     const authHeader = req.headers.authorization;
 
-    if(!authHeader && !authHeader.startsWith('Bearer')){
+    if(!authHeader || !authHeader.startsWith('Bearer')){
         return res.status(401).json({message: 'No token provided'});
     }
     try{
@@ -30,6 +30,8 @@ const authMiddleware = async (req,res,next)=>{
 
         // We will use the user id to find the user in the database
         const user = await User.findById(decoded.id);
+        console.log('User found:', user);
+
 
         req.user = user; // We will attach the user object to the request object
 

@@ -1,5 +1,6 @@
 import {useState} from 'react';
 import './Login.css';
+import axios from 'axios'; 
 import warehouseImage from '../assets/warehouses.jpg'; 
 function Login() {
     // State variables for email and password
@@ -12,11 +13,26 @@ function Login() {
     // Function to handle form submission
     // This function will be called when the user submits the form
     // It will prevent the default form submission behavior and log the email and password to the console
-    const handleLogin =(e)=>{
+    const handleLogin = async(e)=>{
         e.preventDefault();
         console.log('Logging in with', {email, password});
     // Here you would typically send the email and password to your server for authentication
     //TODO: Add authentication logic here
+
+        try{
+            const res = await axios.post('http://localhost:5000/api/auth/login',{
+              email,
+              password,
+            });
+            localStorage.setItem('token', res.data.token);
+            localStorage.setItem('role', res.data.user.role);
+            console.log('Logged in user role:', res.data.user.role);
+
+            window.location.href = '/dashboard';
+        }catch(err){
+          alert(err.message);
+          console.error(err);
+        }
     }
   return (
     <div className="login-page">
